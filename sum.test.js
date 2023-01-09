@@ -1,3 +1,4 @@
+
 const sum = require('./sum')
 
  // Tests can be grouped together in test blocks using describe()
@@ -9,19 +10,28 @@ it("should add 1 + 2 to equal 3", () => {
  expect(result).toBe(3)
 })
  
- // Example of case where toBe() doesn't work (objects / arrays etc)
+// Example of case where toBe() doesn't work (objects / arrays etc)
  
- // ie. Objects & Arrays:  console.log([] === []) -> returns false
- // ie. String:  console.log("" === "") -> returns true
-it("object assignment"), () => {
-  const obj = {}
-  expect(obj).toBe({})
-}
- // Correct way would be to use toEqual() -> Throws error and I don't know why
-it("object assignment"), () => {
+  // ie. Objects & Arrays:  console.log([] === []) -> returns false
+  // ie. String:  console.log("" === "") -> returns true
+
+// it("object assignment"), () => {
+//   const obj = {}
+//   expect(obj).toBe({})
+// }
+ 
+// Correct way would be to use toEqual()
+it("object assignment", () => {
   const obj = {}
   expect(obj).toEqual({})
-}
+})
+})
+
+describe("truthy or falsy", () => {
+ it("null", () => {
+  const n = null;
+  expect(n).toBeFalsy()
+ })
 })
 
  
